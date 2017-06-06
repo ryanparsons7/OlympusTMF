@@ -71,8 +71,29 @@ class display3DEN
                             textureDisabledChecked="\x\tmf\addons\common\UI\logo_tmf_small_toolbar_active_ca.paa";
                             textureDisabledUnchecked="\x\tmf\addons\common\UI\logo_tmf_small_ca.paa";
                         };
+                        class WallTool: ctrlCheckboxToolbar
+                        {
+                            idc=-1;
+                            onCheckedChanged=QUOTE(GVAR(wallToolActive) = !GVAR(wallToolActive));
+                            x="1 *     (    5 * (pixelW * pixelGrid *     0.50))";
+                            y=0;
+                            h="(    5 * (pixelH * pixelGrid *     0.50))";
+                            w="(    5 * (pixelW * pixelGrid *     0.50))";
+                            tooltip="TMF: Toggle wall tool";
+                            textureChecked="\x\tmf\addons\common\UI\logo_tmf_small_toolbar_active_ca.paa";
+                            textureUnchecked="\x\tmf\addons\common\UI\logo_tmf_small_ca.paa";
+                            textureFocusedChecked="\x\tmf\addons\common\UI\logo_tmf_small_toolbar_active_ca.paa";
+                            textureFocusedUnchecked="\x\tmf\addons\common\UI\logo_tmf_small_ca.paa";
+                            textureHoverChecked="\x\tmf\addons\common\UI\logo_tmf_small_toolbar_active_ca.paa";
+                            textureHoverUnchecked="\x\tmf\addons\common\UI\logo_tmf_small_ca.paa";
+                            texturePressedChecked="\x\tmf\addons\common\UI\logo_tmf_small_toolbar_active_ca.paa";
+                            texturePressedUnchecked="\x\tmf\addons\common\UI\logo_tmf_small_ca.paa";
+                            textureDisabledChecked="\x\tmf\addons\common\UI\logo_tmf_small_toolbar_active_ca.paa";
+                            textureDisabledUnchecked="\x\tmf\addons\common\UI\logo_tmf_small_ca.paa";
+                        };
                     };
                 };
+
             };
         };
     };

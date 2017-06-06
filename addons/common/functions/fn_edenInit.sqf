@@ -25,6 +25,7 @@ if !(_idx == -1) then {
 _idx = addMissionEventHandler ["Draw3D",FUNC(edenDraw)];
 
 GVAR(Garrison) = missionNamespace getVariable [QGVAR(Garrison),false]; // Will be set on UI onLoad
+GVAR(wallToolActive) = false;
 GVAR(edenDrawIdx) = _idx;
 GVAR(edenMouseObjects) = [];
 GVAR(mouseKeysPressed) = [];
@@ -40,6 +41,21 @@ GVAR(edenMouseKeyUpIdx) = ((findDisplay 313) displayAddEventHandler ["mouseButto
     [_this select 1] call FUNC(edenMouseKeyUp);
     GVAR(mouseKeysPressed) = GVAR(mouseKeysPressed) - [(_this select 1)];
 }]);
+
+
+((findDisplay 313) displayAddEventHandler ["mouseButtonDown",{
+    params ["_control","_button","_x","_y","_shift"];
+    if(!_shift || isNull _control || !GVAR(wallToolActive)) exitWith {false};
+    _objects = get3DENSelected "object";
+    if(count _objects < 1) exitWith {false};
+    [_objects select 0,ATLToASL screenToWorld getMousePosition] call FUNC(createWall);
+    true
+}]);
+
+
+
+
+
 // MouseZchanged
 GVAR(edenMouseZchangedIdx) = ((findDisplay 313) displayAddEventHandler ["mouseZchanged",{
     if (GVAR(Garrison)) then {
