@@ -18,7 +18,7 @@
     } else {
         (_display displayCtrl IDC_ToggleStaticsZeus) ctrlSetTextColor [1,1,1,1];
     };
-    if (_curator getVariable ["TFAR_forceSpectator",false]) then {
+    if (player getVariable ["TFAR_forceSpectator",false]) then {
         (_display displayCtrl IDC_toggleTFARSpectator) ctrlSetTextColor [0,1,0,1];
     } else {
         (_display displayCtrl IDC_toggleTFARSpectator) ctrlSetTextColor [1,1,1,1];

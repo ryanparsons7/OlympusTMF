@@ -76,7 +76,7 @@ class RscDisplayCurator {
                 class GVAR(toggleTFARSpectator): GVAR(toggleStaticsZeus) {
                     idc = IDC_toggleTFARSpectator;
                     x ="14 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    text = "ACRE Spectator";
+                    text = "TFAR Spectator";
                     action = QUOTE(_this call FUNC(toggleTFARSpectator));
                     tooltip = "Toggle TFAR Spectator, allowing you to hear specators and in-game players via the Zeus interface.";
                 };
