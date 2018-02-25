@@ -5,4 +5,4 @@
 
 #define IDC_ToggleUnitsZeus 93950
 #define IDC_ToggleStaticsZeus 93951
-#define IDC_toggleTFARSpectator 93952
+#define IDC_ToggleACRESpectator 93952

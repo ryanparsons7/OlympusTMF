@@ -74,11 +74,6 @@ if (!isNil QGVAR(zeusPos) && {getMissionConfigValue ["TMF_Spectator_AllowFreeCam
     };
 };
 
-// If TFAR is enabled, turn on spectator mode for TFAR.
-if (isClass(configFile >> "CfgPatches" >> "task_force_radio")) then {
-[player, true] call TFAR_fnc_forceSpectator;
-};
-
 // if ACRE2 is enabled, enable the mute button
 if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
     [true] call acre_api_fnc_setSpectator;
